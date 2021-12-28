@@ -42,7 +42,7 @@ for i in $LIST
 do
   perc=$((c * 100 / MAX_STEPS))
   percBar=$((perc * MAX_BAR_SIZE / 100))
-  echo -ne "\\r[${BAR_SIZE:0:percBar}] $perc %$CLEAR_LINE"
+  echo -ne "\\r[${BAR_SIZE:0:percBar}] $perc % [$i] $CLEAR_LINE"
   if [ "${#i}" -lt "3" ]; then continue; fi
   ((c++))
   sleep 0.01
