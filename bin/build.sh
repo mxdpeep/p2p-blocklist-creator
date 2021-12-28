@@ -42,8 +42,9 @@ for i in $LIST
 do
   perc=$((c * 100 / MAX_STEPS))
   percBar=$((perc * MAX_BAR_SIZE / 100))
-  echo -ne "\\r[${BAR_SIZE:0:percBar}] $perc % [$i] $CLEAR_LINE"
-  if [ "${#i}" -lt "3" ]; then continue; fi
+  if [ "${#i}" -lt "3" ]; then continue
+    else echo -ne "\\r[${BAR_SIZE:0:percBar}] $perc % [$i] $CLEAR_LINE"
+  fi
   ((c++))
   sleep 0.01
   if [ -f "$i.txt" ]; then continue; fi
