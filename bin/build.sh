@@ -52,6 +52,11 @@ do
   gunzip *.gz
 done
 
+c=$MAX_STEPS
+perc=$((c * 100 / MAX_STEPS))
+percBar=$((perc * MAX_BAR_SIZE / 100))
+echo -ne "\\r[${BAR_SIZE:0:percBar}] $perc % $CLEAR_LINE"
+
 cat *.txt > blocklist.p2p
 LINES=`cat blocklist.p2p | wc -l`
 echo -en "\n\nBlocklist created: $LINES lines\n\n"
