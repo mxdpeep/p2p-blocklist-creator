@@ -1,6 +1,6 @@
 #!/bin/bash
 
-BAR_SIZE="##################"
+BAR_SIZE="💖💖💖💖💖💖💖💖💖💖💖💖💖💖💖💖💖💖"
 CLEAR_LINE="\\033[K"
 MAX_BAR_SIZE="${#BAR_SIZE}"
 TEMP_JSON="/tmp/p2p.json"
