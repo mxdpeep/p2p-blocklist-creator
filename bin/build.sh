@@ -24,7 +24,7 @@ if [ $? -eq 1 ]; then
 fi
 
 if [ ! -f "$TEMP_JSON" ]; then
-  curl https://www.iblocklist.com/lists.json > $TEMP_JSON
+  curl -s https://www.iblocklist.com/lists.json > $TEMP_JSON
 fi
 
 LIST=`cat $TEMP_JSON | jq -cr '.[]|.[]|select(.subscription == "false")|.list'`
