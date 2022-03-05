@@ -7,19 +7,19 @@ TEMP_JSON="/tmp/p2p.json"
 
 which curl >/dev/null 2>&1
 if [ $? -eq 1 ]; then
-  echo "Installing curl package..."
+  echo "Installing curl"
   sudo apt-get install curl -yq
 fi
 
 which wget >/dev/null 2>&1
 if [ $? -eq 1 ]; then
-  echo "Installing wget package..."
+  echo "Installing wget"
   sudo apt-get install wget -yq
 fi
 
 which jq >/dev/null 2>&1
 if [ $? -eq 1 ]; then
-  echo "Installing jq package..."
+  echo "Installing jq"
   sudo apt-get install jq -yq
 fi
 
@@ -57,7 +57,6 @@ percBar=$((perc * MAX_BAR_SIZE / 100))
 echo -ne "\\r[${BAR_SIZE:0:percBar}] $perc % $CLEAR_LINE"
 
 cat *.txt > blocklist.p2p
-
 LINES=`cat blocklist.p2p | wc -l`
 echo -en "\n\nBlocklist created: $LINES lines\n\n"
 
