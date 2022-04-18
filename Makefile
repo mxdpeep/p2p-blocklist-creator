@@ -1,8 +1,10 @@
+#@author Fred Brooker <git@gscloud.cz>
+include .env
 all: info
 
 info:
-	@echo "\e[1;32m👾 Welcome to P2P blocklist builder 👾\n"
-
+	@echo "\e[1;32m👾 Welcome to ${APP_NAME}"
+	@echo ""
 	@echo "🆘 \e[0;1mmake build\e[0m - build blocklist"
 	@echo "🆘 \e[0;1mmake clean\e[0m - clean current folder"
 	@echo "🆘 \e[0;1mmake docs\e[0m - build documentation"

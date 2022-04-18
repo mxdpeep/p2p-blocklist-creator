@@ -1,4 +1,5 @@
 #!/bin/bash
+#@author Fred Brooker <git@gscloud.cz>
 
 BAR_SIZE="️▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓"
 CLEAR_LINE="\\033[K"
