@@ -9,6 +9,7 @@ info:
 	@echo "🆘 \e[0;1mmake build\e[0m - build blocklist"
 	@echo "🆘 \e[0;1mmake push\e[0m - push to GitHub"
 	@echo "🆘 \e[0;1mmake docs\e[0m - build documentation"
+	@echo ""
 
 docs:
 	@bash ./bin/create_pdf.sh
