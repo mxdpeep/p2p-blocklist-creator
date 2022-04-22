@@ -1,6 +1,13 @@
 #!/bin/bash
 #@author Fred Brooker <git@gscloud.cz>
 
+source .env
+
+if [ -z ${OUTPUT_FILE+x} ]; then
+  echo "Missing OUTPUT_FILE definition!"
+  exit 1
+fi
+
 BAR_SIZE="️▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓"
 CLEAR_LINE="\\033[K"
 MAX_BAR_SIZE="${#BAR_SIZE}"
@@ -57,12 +64,9 @@ perc=100
 percBar=$((perc * MAX_BAR_SIZE / 100))
 echo -ne "\\r[${BAR_SIZE:0:percBar}] $perc % $CLEAR_LINE"
 
-cat *.txt > blocklist.p2p
+cat *.txt > $OUTPUT_FILE
 LINES=`cat blocklist.p2p | wc -l`
 echo -en "\n\nBlocklist created: $LINES lines\n\n"
-
-# push if mxdpeep is local user
-if [ `whoami` == "mxdpeep" ]; then git commit -am "data rebuild"; git push origin master; fi
 
 tput cnorm -- normal
 
