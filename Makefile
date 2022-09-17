@@ -19,4 +19,4 @@ push:
 	@bash ./bin/push.sh
 
 # macro
-everything: clean docs build push
+everything: clean build push
