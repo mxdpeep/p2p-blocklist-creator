@@ -36,7 +36,7 @@ if [ ! -f "$TEMP_JSON" ]; then
 fi
 
 LIST=`cat $TEMP_JSON | jq -cr '.[]|.[]|select(.subscription == "false")|.list'`
-tput civis -- invisible
+tput civis
 
 MAX_STEPS=0
 for i in $LIST
@@ -68,6 +68,6 @@ cat *.txt > $OUTPUT_FILE
 LINES=`cat blocklist.p2p | wc -l`
 echo -en "\n\nBlocklist created: $LINES lines\n\n"
 
-tput cnorm -- normal
+tput cnorm
 
 exit 0
