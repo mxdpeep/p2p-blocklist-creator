@@ -11,4 +11,4 @@ Downloads and builds P2P blocklist for your torrenting client.
 You may simply use the pre-created blocklist from this address:  
 [https://raw.githubusercontent.com/mxdpeep/p2p-blocklist-creator/master/blocklist.p2p]
 
-Author: Fred Brooker <f@mxd.cz> [https://witter.cz/@fredbrooker]
+Author: Fred Brooker 💌 <git@gscloud.cz> ⛅️ GS Cloud Ltd. [https://gscloud.cz](https://gscloud.cz)

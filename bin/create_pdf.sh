@@ -16,4 +16,4 @@ find . -type d \( -path ./node_modules -o -path ./vendor \) -prune -false -o -in
     -exec echo "Converting {} to PDF" \; \
     -exec docker run --rm -v $(pwd):/documents/ asciidoctor/docker-asciidoctor:latest asciidoctor-pdf "{}" \;
 
-exit 0
+rm *.adoc
