@@ -19,4 +19,4 @@ push:
 	@bash ./bin/push.sh
 
 # macro
-everything: clean build push
+everything: build push clean
