@@ -31,6 +31,8 @@ if [ $? -eq 1 ]; then
   sudo apt-get install jq -yq
 fi
 
+find . -type f -empty -delete
+
 if [ ! -f "$TEMP_JSON" ]; then
   curl -s https://www.iblocklist.com/lists.json > $TEMP_JSON
 fi
