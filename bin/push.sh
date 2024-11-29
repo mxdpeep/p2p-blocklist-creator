@@ -6,5 +6,3 @@ if [ "mxdpeep" == `whoami` ]; then
     git commit -am "data rebuild"
     git push origin master
 fi
-
-exit 0
