@@ -71,5 +71,3 @@ LINES=`cat blocklist.p2p | wc -l`
 echo -en "\n\nBlocklist created: $LINES lines\n\n"
 
 tput cnorm
-
-exit 0
