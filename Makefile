@@ -10,12 +10,18 @@ info:
 	@echo "\e[0;1m push\e[0m - push to GitHub"
 	@echo "\e[0;1m docs\e[0m - build documentation"
 	@echo ""
+
 docs:
-	@bash ./bin/create_pdf.sh
+	@find . -maxdepth 1 -iname "*.md" -exec echo "converting {} to ADOC" \; -exec docker run --rm -v "$$(pwd)":/data pandoc/core -f markdown -t asciidoc -i "{}" -o "{}.adoc" \;
+	@find . -maxdepth 1 -iname "*.adoc" -exec echo "converting {} to PDF" \; -exec docker run --rm -v $$(pwd):/documents/ asciidoctor/docker-asciidoctor asciidoctor-pdf -a allow-uri-read -d book "{}" \;
+	@find . -maxdepth 1 -iname "*.adoc" -delete
+
 build:
 	@bash ./bin/build.sh
+
 clean:
 	@rm -f *.txt *.gz
+
 push:
 	@bash ./bin/push.sh
 
