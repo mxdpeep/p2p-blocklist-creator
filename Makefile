@@ -5,10 +5,10 @@ all: info
 info:
 	@echo "\e[1;32m👾 Welcome to ${APP_NAME}"
 	@echo ""
-	@echo "\e[0;1m clean\e[0m - clean folder"
-	@echo "\e[0;1m build\e[0m - build blocklist"
-	@echo "\e[0;1m push\e[0m - push to GitHub"
-	@echo "\e[0;1m docs\e[0m - build documentation"
+	@echo "\e[0;1mclean\e[0m - clean folder"
+	@echo "\e[0;1mbuild\e[0m - build blocklist"
+	@echo "\e[0;1mpush\e[0m - push to GitHub"
+	@echo "\e[0;1mdocs\e[0m - build documentation"
 	@echo ""
 
 docs:
